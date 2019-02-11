@@ -40,7 +40,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth:superadmin');
     }
 
     public function showRegistrationForm()
@@ -51,6 +51,10 @@ class RegisterController extends Controller
     protected function guard()
     {
         return Auth::guard('admin');
+    }
+
+    public function register() {
+        return redirect('admin.register');
     }
 
     /**

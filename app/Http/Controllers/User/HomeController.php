@@ -16,4 +16,9 @@ class HomeController extends Controller
     {
         return view('user.home');
     }
+
+    public function home()
+    {
+        return redirect()->route('user.home');
+    }
 }

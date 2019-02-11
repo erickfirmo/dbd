@@ -42,10 +42,16 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    
+    public function register() {
+        return redirect('user.register');
+    }
+
     public function showRegistrationForm()
     {
         return view('user.auth.register');
     }
+
 
     protected function guard()
     {
