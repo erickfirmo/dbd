@@ -15,7 +15,7 @@
                     @endif
 
                     You are logged in!
-                    User
+                    Cliente/User
                 </div>
             </div>
         </div>

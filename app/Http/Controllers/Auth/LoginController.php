@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/user';
+    protected $redirectTo = '/cliente';
 
     /**
      * Create a new controller instance.
@@ -41,23 +41,23 @@ class LoginController extends Controller
     public function showRegistrationForm()
     {
         //return view('admin.auth.register');
-        return redirect('/user/register');
+        return redirect('/cliente/register');
 
     }
 
     public function showLoginForm()
     {
         //return view('user.auth.login');
-        return redirect('/user/login');
+        return redirect('/cliente/login');
 
     }
     public function logout(Request $request)
     {
         $this->guard()->logout();
-        return redirect('/user/login');
+        return redirect('/cliente/login');
     }
     protected function guard()
     {
-        return Auth::guard('user');
+        return Auth::guard('cliente');
     }
 }
